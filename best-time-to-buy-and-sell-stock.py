@@ -17,7 +17,7 @@ class Solution:
         if len(prices)==0 or len(prices)==1:
             return 0
         
-        gap_list = []
+        gap_list = [0]
         for index, item in enumerate(prices):
             if index == 0:
                 prev = item
@@ -27,4 +27,4 @@ class Solution:
                     prev = item 
                 gap_list.append(gap)
         gap_max = max(gap_list)
-        return gap_max if gap_max > 0 else 0 
+        return gap_max 
