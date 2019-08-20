@@ -11,6 +11,7 @@
 #输入: a = "1010", b = "1011"
 #输出: "10101"
 
+# 思路：转为二进制int做加法，将得到的结果bin转成10为底的int
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
         return str(bin(int(a,base=2)+int(b,base=2)))[2:]
