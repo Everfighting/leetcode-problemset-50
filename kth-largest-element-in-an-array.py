@@ -17,3 +17,9 @@ class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         new_nums = sorted(nums, reverse=True)
         return new_nums[k-1]
+
+# 用库heapq.nlargest
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        return heapq.nlargest(k, nums)[-1]
+
